@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LotteryApp1.Views.ItemDetailPage"
+             Title="{Binding Title}">
+
+    <StackLayout Spacing="20" Padding="15">
+        <Label Text="Draw Date:" FontSize="Medium" />
+        <Label Text="{Binding DrawDate}" FontSize="Small"/>
+        <Label Text="Numbers:" FontSize="Medium" />
+        <Label Text="{Binding Numbers}" FontSize="Small"/>
+        <Label Text="Bonus Ball:" FontSize="Medium" />
+        <Label Text="{Binding BonusBall}" FontSize="Small"/>
+        <Label Text="Top Prize:" FontSize="Medium" />
+        <Label Text="{Binding TopPrize}" FontSize="Small"/>
+        <Button Text="I'm Feeling Lucky!" Command="{Binding LuckyDipCommand}" FontSize="Medium"/>
+        <StackLayout Spacing="20" IsVisible="{Binding ShowLuckyDip}">
+            <Label Text="Your Lucky Dip!" FontSize="Large" />
+            <Label Text="Numbers:" FontSize="Medium" />
+            <Label Text="{Binding LuckyDipNumbers}" FontSize="Small"/>
+            <Label Text="Bonus Ball:" FontSize="Medium" />
+            <Label Text="{Binding LuckyDip.BonusBall}" FontSize="Small"/>
+            <Label Text="{Binding LuckyDipMessage}" FontSize="Medium" />
+        </StackLayout>
+    </StackLayout>
+    
+</ContentPage>
